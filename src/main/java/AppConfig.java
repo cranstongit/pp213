@@ -11,4 +11,15 @@ public class AppConfig {
         helloWorld.setMessage("Hello World!");
         return helloWorld;
     }
+
+    @Bean(name="catmew")
+    public Cat getCat() {
+        Cat cat = new Cat();
+        cat.setMew("Mew-Mew");
+        return cat;
+    }
 }
+/*В классе AppConfig содержится метод,
+помеченный аннотацией как бин, этот метод будет выполнен
+при запуске и его результат станет объектом, управляемым Спрингом.
+ */

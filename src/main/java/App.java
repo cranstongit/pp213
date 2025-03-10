@@ -7,6 +7,11 @@ public class App {
                 new AnnotationConfigApplicationContext(AppConfig.class);
         HelloWorld bean =
                 (HelloWorld) applicationContext.getBean("helloworld");
+
         System.out.println(bean.getMessage());
     }
 }
+
+/*Класс App содержит метод main, который запускает Спринг при создании контекста.
+В контекст мы передаем класс AppConfig, который помечен аннотацией @Configuration
+— так Спринг понимает, что это настроечный класс.*/
