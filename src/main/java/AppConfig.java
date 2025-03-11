@@ -13,13 +13,10 @@ public class AppConfig {
     }
 
     @Bean(name="catmew")
+    @Scope("prototype")
     public Cat getCat() {
         Cat cat = new Cat();
         cat.setMew("Mew-Mew");
         return cat;
     }
 }
-/*В классе AppConfig содержится метод,
-помеченный аннотацией как бин, этот метод будет выполнен
-при запуске и его результат станет объектом, управляемым Спрингом.
- */
